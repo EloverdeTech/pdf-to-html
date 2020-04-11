@@ -167,6 +167,6 @@ class Base
 
     public function bin()
     {
-        return Config::get('pdftohtml.bin', '/usr/lbin/pdftohtml');
+        return Config::get('pdftohtml.bin', '/usr/bin/pdftohtml');
     }
 }

@@ -78,6 +78,6 @@ class Pdf
 
     public function bin()
     {
-        return Config::get('pdfinfo.bin', '/usr/lbin/pdfinfo');
+        return Config::get('pdfinfo.bin', '/usr/bin/pdfinfo');
     }
 }
