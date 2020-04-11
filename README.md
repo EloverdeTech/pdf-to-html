@@ -63,10 +63,10 @@ $dom->goToPage(3);
 $paragraphs = $dom->find('body > p');
 
 // change pdftohtml bin location
-\Gufy\PdfToHtml\Config::set('pdftohtml.bin', '/usr/bin/pdftohtml');
+\Gufy\PdfToHtml\Config::set('pdftohtml.bin', '/usr/lbin/pdftohtml');
 
 // change pdfinfo bin location
-\Gufy\PdfToHtml\Config::set('pdfinfo.bin', '/usr/bin/pdfinfo');
+\Gufy\PdfToHtml\Config::set('pdfinfo.bin', '/usr/lbin/pdfinfo');
 ?>
 ```
 
@@ -134,10 +134,10 @@ brew install poppler
 **3. Verify the path of pdfinfo and pdftohtml**
 ```bash
 $ which pdfinfo
-/usr/bin/pdfinfo
+/usr/lbin/pdfinfo
 
 $ which pdftohtml
-/usr/bin/pdfinfo
+/usr/lbin/pdfinfo
 ```
 
 **4. Whatever the paths are, use ```Gufy\PdfToHtml\Config::set``` to set them in your php code**. Obviously, use the same path as the one given by the ```which``` command;
@@ -148,10 +148,10 @@ $ which pdftohtml
 include 'vendor/autoload.php';
 
 // change pdftohtml bin location
-\Gufy\PdfToHtml\Config::set('pdftohtml.bin', '/usr/bin/pdftohtml');
+\Gufy\PdfToHtml\Config::set('pdftohtml.bin', '/usr/lbin/pdftohtml');
 
 // change pdfinfo bin location
-\Gufy\PdfToHtml\Config::set('pdfinfo.bin', '/usr/bin/pdfinfo');
+\Gufy\PdfToHtml\Config::set('pdfinfo.bin', '/usr/lbin/pdfinfo');
 
 // initiate
 $pdf = new Gufy\PdfToHtml\Pdf('file.pdf');

@@ -7,8 +7,8 @@ class PdfInfoTest extends PHPUnit_Framework_TestCase
   public function setUp(){
     parent::setUp();
 
-    Config::set('pdfinfo.bin', '/usr/bin/pdfinfo');
-    Config::set('pdftohtml.bin', '/usr/bin/pdftohtml');
+    Config::set('pdfinfo.bin', '/usr/lbin/pdfinfo');
+    Config::set('pdftohtml.bin', '/usr/lbin/pdftohtml');
   }
   public function testGetOptions()
   {
