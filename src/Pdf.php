@@ -6,6 +6,7 @@ class Pdf
 {
     protected $file;
     protected $info;
+    protected $dom;
 
     public function __construct($file, $options = [])
     {
@@ -53,7 +54,11 @@ class Pdf
     {
         $this->checkInfo();
 
-        return new Html($this->file, $options);
+        if (!$this->dom) {
+            $this->dom = new Html($this->file, $options);
+        }
+
+        return $this->dom;
     }
 
     public function html($page = 1, $options = [])
